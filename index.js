@@ -26,12 +26,12 @@ app.get('/api/tasks', (req, res) => {
 });
 
 app.post('/api/tasks', (req, res) => {
-    const {error} = validateTask(req.body);
+    const {error} = validateTask(req.body.task);
     if(error) return res.status(400).send(error.details[0].message);
 
     const task = {
         id: tasks.length + 1,
-        desc: req.body.desc,
+        desc: req.body.task.desc,
         completed: false,
     };
     tasks.push(task);
