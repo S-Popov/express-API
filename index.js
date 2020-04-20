@@ -12,9 +12,9 @@ app.use(function(req, res, next) {
 });
 
 const tasks = [
-    {id: 1, desc: "kurec", completed: true},
-    {id: 2, desc: "golqm kurec", completed: false},
-    {id: 3, desc: "hui", completed: false}
+    {id: 1, desc: "Go groceries shopping", completed: false},
+    {id: 2, desc: "Take the dog for a walk", completed: false},
+    {id: 3, desc: "Apply for an online course", completed: false}
 ]
 
 app.get('/', (req, res) =>{
